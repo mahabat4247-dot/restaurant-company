@@ -1,0 +1,6 @@
+projectKey=Restaurant-Company
+serverUrl=http://localhost:9000
+serverVersion=26.9.0.129388
+dashboardUrl=http://localhost:9000/dashboard?id=Restaurant-Company
+ceTaskId=b76154ec-a0bd-4a52-8857-26a427125f68
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b76154ec-a0bd-4a52-8857-26a427125f68
