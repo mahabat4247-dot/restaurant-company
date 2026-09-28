@@ -180,7 +180,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
 
       # ------------------------------------------
       # Login Docker to Amazon ECR
@@ -204,7 +204,7 @@ jobs:
         run: |
           docker tag \
             restaurant-company:${{ github.sha }} \
-            529057333672.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:${{ github.sha }}
+            529057333672.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:${{ github.sha }}
 
       # ------------------------------------------
       # Push SHA-tagged Image to ECR
@@ -212,7 +212,7 @@ jobs:
       - name: Push Docker image to ECR
         run: |
           docker push \
-            529057333672.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:${{ github.sha }}
+            529057333672.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:${{ github.sha }}
 
       # ------------------------------------------
       # Also create latest tag
@@ -221,9 +221,9 @@ jobs:
         run: |
           docker tag \
             restaurant-company:${{ github.sha }} \
-            529057333672.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:latest
+            529057333672.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:latest
 
       - name: Push latest to ECR
         run: |
           docker push \
-           529057333672.dkr.ecr.us-east-1.amazonaws.com/restaurant-company:latest
+           529057333672.dkr.ecr.us-east-2.amazonaws.com/restaurant-company:latest
