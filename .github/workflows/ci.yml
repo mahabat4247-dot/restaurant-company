@@ -74,6 +74,10 @@ jobs:
           scanners: vuln
           severity: HIGH,CRITICAL
           exit-code: 2
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 19cd15e (Update CI workflow)
 
 
   # ==========================================
